@@ -6,7 +6,7 @@ def main():
     text = get_book_text(book_path)
     count = get_word_count(text)
     filename = os.path.basename(book_path)
-    print(f"{filename} contais {count} words")
+    print(f"{filename} contains {count} words")
 
 
 def get_book_text(path):
@@ -14,11 +14,7 @@ def get_book_text(path):
         return f.read()
 
 
-def get_word_count(text):
-    """
-
-    :type text: str
-    """
+def get_word_count(text: str) -> int:
     words = text.split()
     return len(words)
 
